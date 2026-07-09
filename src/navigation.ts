@@ -14,7 +14,7 @@ export const headerData = {
   actions: [
     {
       text: 'Fale Conosco',
-      href: 'https://wa.me/554591190099',
+      href: 'https://wa.me/557799213803',
       target: '_blank',
     },
   ],
@@ -26,7 +26,7 @@ export const footerData = {
     { text: 'Serviços', href: getPermalink('/#servicos') },
     { text: 'Blog', href: getBlogPermalink() },
   ],
-  socialLinks: [{ ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'whatsapp://send?phone=554591190099' }],
+  socialLinks: [{ ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'whatsapp://send?phone=557799213803' }],
   footNote: `
     © 2025 Vô Tech · Todos os direitos reservados.
   `,
