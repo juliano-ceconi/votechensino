@@ -9,7 +9,7 @@ tags:
   - ia
   - assistente
   - chatbot
-  - productivity
+  - produtividade
 metadata:
   canonical: 'https://votech.com.br/manus'
 ---

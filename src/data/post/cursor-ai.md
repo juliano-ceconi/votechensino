@@ -9,7 +9,7 @@ tags:
   - ia
   - programação
   - editor
-  - productivity
+  - produtividade
 metadata:
   canonical: 'https://votech.com.br/cursor-ai'
 ---
