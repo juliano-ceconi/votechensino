@@ -1,17 +1,94 @@
 ---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Vô Tech — Soluções em Tecnologia e Cursos VIP',
+  ignoreTitleTemplate: true,
+};
 ---
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Votech Ensino</title>
-  </head>
-  <body class="bg-slate-900 text-white min-h-screen flex items-center justify-center">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold tracking-tight mb-4">Votech Ensino</h1>
-      <p class="text-slate-400">Estrutura Astro + Tailwind inicializada.</p>
-    </div>
-  </body>
-</html>
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Nossos Serviços',
+        href: '#servicos',
+        icon: 'tabler:briefcase',
+      },
+      {
+        text: 'Fale Conosco',
+        href: 'https://wa.me/554591190099',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Vô Tech Hero Image' }}
+  >
+    <Fragment slot="title"> Vô Tech: Soluções inovadoras para o seu negócio </Fragment>
+
+    <Fragment slot="subtitle"> Simplificamos a tecnologia para você ir mais longe. </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="servicos"
+    tagline="Nossos Serviços"
+    title="O que a Vô Tech oferece"
+    subtitle="Soluções personalizadas e cursos de alta qualidade para atender às suas necessidades tecnológicas."
+    items={[
+      {
+        title: 'Sistema com a mensalidade mais baixa do mercado',
+        description:
+          'Desenvolvemos sistemas personalizados para o seu negócio, com a mensalidade mais baixa do mercado.',
+        icon: 'tabler:database-dollar',
+      },
+      {
+        title: 'Automações',
+        description:
+          'Otimize seus processos e economize tempo com nossas soluções de automação personalizadas para tarefas repetitivas.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Cursos VIP',
+        description:
+          'Aprenda tecnologia de forma personalizada com nossos cursos VIP: IA, Excel, Informática, Montagem e Manutenção.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Criação de Sites',
+        description:
+          'Desenvolvemos sites personalizados e responsivos para o seu negócio, com design moderno e otimizado para resultados.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Fale Conosco',
+        href: 'https://wa.me/554591190099',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Pronto para simplificar sua tecnologia? </Fragment>
+
+    <Fragment slot="subtitle">
+      Entre em contato com a Vô Tech hoje mesmo e descubra como nossas soluções e cursos podem ajudar você a alcançar
+      seus objetivos.
+    </Fragment>
+  </CallToAction>
+</Layout>
